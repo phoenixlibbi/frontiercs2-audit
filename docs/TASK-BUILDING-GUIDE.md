@@ -75,4 +75,4 @@ See [`results/FINDINGS.md`](../results/FINDINGS.md) (generated) and [`VERIFICATI
 - The release reproduces the paper's pass rates and its 16 never-passed tasks exactly.
 - 242 of the 379 runs that out-score the reference still fail (paper's 12 agents).
 - 57 of 401 graded failures missed exactly one hidden metric-workload check.
-- Only two runs pass Progent, and both final patches detect AgentDojo's attack by its known text, which step 13's rule excludes. The authors flagged one (Carbon); the other (Gemini 4 Argon in Antigravity) is a plain PASS in the release.
+- Only two runs pass Progent, and both final patches detect AgentDojo's attack by its known text, which the task statement (step 13) asks policies not to rely on. The authors flagged one (Carbon); the other (Gemini 4 Argon in Antigravity) is a plain PASS in the release.
