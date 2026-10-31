@@ -1,0 +1,732 @@
+{
+ "sources": {
+  "hf_dataset": "FrontierCS2/FrontierCS-2-runs",
+  "hf_revision": "10a1e8971692e35464c06c83d820b2704476f7c1",
+  "github_repo": "FrontierCS/FrontierCS-2",
+  "github_revision": "0de64ff83ab07f546824bd2c46860e718c915a8c",
+  "paper": "arXiv:2610.29932v1"
+ },
+ "counts": {
+  "runs": 912,
+  "models": 19,
+  "tasks": 48,
+  "patches": 870
+ },
+ "reproduce": {
+  "agents": {
+   "opus": {
+    "passes": 28,
+    "runs": 48,
+    "pass_pct": 58,
+    "paper_pct": 58
+   },
+   "astra": {
+    "passes": 21,
+    "runs": 48,
+    "pass_pct": 44,
+    "paper_pct": 44
+   },
+   "gemini": {
+    "passes": 19,
+    "runs": 48,
+    "pass_pct": 40,
+    "paper_pct": 40
+   },
+   "sol": {
+    "passes": 17,
+    "runs": 48,
+    "pass_pct": 35,
+    "paper_pct": 35
+   },
+   "glm": {
+    "passes": 12,
+    "runs": 48,
+    "pass_pct": 25,
+    "paper_pct": 25
+   },
+   "k3": {
+    "passes": 10,
+    "runs": 48,
+    "pass_pct": 21,
+    "paper_pct": 21
+   },
+   "wonder": {
+    "passes": 10,
+    "runs": 48,
+    "pass_pct": 21,
+    "paper_pct": 21
+   },
+   "ds": {
+    "passes": 7,
+    "runs": 48,
+    "pass_pct": 15,
+    "paper_pct": 15
+   },
+   "muse": {
+    "passes": 6,
+    "runs": 48,
+    "pass_pct": 12,
+    "paper_pct": 12
+   },
+   "qwen": {
+    "passes": 6,
+    "runs": 48,
+    "pass_pct": 12,
+    "paper_pct": 12
+   },
+   "glmf": {
+    "passes": 6,
+    "runs": 48,
+    "pass_pct": 12,
+    "paper_pct": 12
+   },
+   "step": {
+    "passes": 4,
+    "runs": 48,
+    "pass_pct": 8,
+    "paper_pct": 8
+   }
+  },
+  "never_passed": [
+   "cute_crest",
+   "diffusion_policy_cpu",
+   "edlib_exact_alignment",
+   "egraph_invariant_restoration",
+   "fast_kv_compaction",
+   "flow_opd",
+   "join_tree_rewriting",
+   "lrr",
+   "lwe_structured_recovery",
+   "mujoco_playground_cpu",
+   "progent_privilege_control",
+   "ragen_multi_turn_rl",
+   "representation_frechet_loss",
+   "runlts_predictor",
+   "sparse_video_attention_policy",
+   "vllm_llm_serving_optimization"
+  ],
+  "all_match": true
+ },
+ "margin_offsets": {
+  "agents": {
+   "opus": {
+    "mean_margin": 11.67,
+    "figure6": 9.4,
+    "offset": 2.27
+   },
+   "astra": {
+    "mean_margin": 9.35,
+    "figure6": 7.1,
+    "offset": 2.25
+   },
+   "sol": {
+    "mean_margin": 7.98,
+    "figure6": 5.7,
+    "offset": 2.28
+   },
+   "gemini": {
+    "mean_margin": 4.38,
+    "figure6": 2.1,
+    "offset": 2.28
+   },
+   "glm": {
+    "mean_margin": 4.13,
+    "figure6": 1.8,
+    "offset": 2.33
+   },
+   "wonder": {
+    "mean_margin": 6.41,
+    "figure6": 4.1,
+    "offset": 2.31
+   },
+   "ds": {
+    "mean_margin": 2.73,
+    "figure6": 0.5,
+    "offset": 2.23
+   },
+   "k3": {
+    "mean_margin": 1.09,
+    "figure6": -1.2,
+    "offset": 2.29
+   },
+   "glmf": {
+    "mean_margin": -6.17,
+    "figure6": -8.4,
+    "offset": 2.23
+   },
+   "muse": {
+    "mean_margin": -0.99,
+    "figure6": -3.3,
+    "offset": 2.31
+   },
+   "qwen": {
+    "mean_margin": -4.14,
+    "figure6": -6.4,
+    "offset": 2.26
+   },
+   "step": {
+    "mean_margin": -8.37,
+    "figure6": -10.6,
+    "offset": 2.23
+   }
+  },
+  "offset_min": 2.23,
+  "offset_max": 2.33,
+  "tasks_without_reference": [
+   "vllm_llm_serving_optimization"
+  ]
+ },
+ "consistency": {
+  "graded_runs": 858,
+  "mismatches": [],
+  "pass_without_checks": 0
+ },
+ "pass_vs_score_paper12": {
+  "runs_above_reference": 379,
+  "above_but_fail": 242,
+  "pass_at_or_below_reference": [
+   "ckks_composable_noise/gemini",
+   "ckks_composable_noise/k3",
+   "ckks_composable_noise/qwen",
+   "ckks_composable_noise/sol",
+   "ckks_composable_noise/wonder"
+  ]
+ },
+ "pass_vs_score_all": {
+  "runs_above_reference": 618,
+  "above_but_fail": 369,
+  "pass_at_or_below_reference": [
+   "ckks_composable_noise/gemini",
+   "ckks_composable_noise/gemini-agy",
+   "ckks_composable_noise/k3",
+   "ckks_composable_noise/qwen",
+   "ckks_composable_noise/sol",
+   "ckks_composable_noise/wonder"
+  ]
+ },
+ "near_misses_paper12": {
+  "graded_fails": 401,
+  "one_miss": 57,
+  "one_miss_records": [
+   "babble_anti_unification/astra",
+   "babble_anti_unification/gemini",
+   "babble_anti_unification/qwen",
+   "babble_anti_unification/step",
+   "batch_local_counting/ds",
+   "batch_local_counting/glm",
+   "batch_local_counting/k3",
+   "bbq_packet_scheduling/astra",
+   "binary_fuse_filter/glm",
+   "binary_fuse_filter/sol",
+   "bounded_evm_path_prediction/ds",
+   "bounded_evm_path_prediction/glmf",
+   "bounded_evm_path_prediction/qwen",
+   "bounded_evm_path_prediction/wonder",
+   "cute_crest/opus",
+   "cute_crest/sol",
+   "cute_crest/step",
+   "detok_latent_denoising/opus",
+   "dynamic_tanh/astra",
+   "dynamic_tanh/ds",
+   "edlib_exact_alignment/astra",
+   "flow_opd/step",
+   "graph_mining_method_selection/ds",
+   "graph_mining_method_selection/glm",
+   "hypergraph_core_numbers/sol",
+   "ivf_pq_gpu_kernel_optimization/glmf",
+   "kami_fp64_block_gemm/qwen",
+   "kami_fp64_block_gemm/wonder",
+   "kmeans_gpu_kernel_optimization/glm",
+   "kmeans_gpu_kernel_optimization/wonder",
+   "knn_gpu_kernel_optimization/sol",
+   "lejepa_world_model/ds",
+   "lejepa_world_model/gemini",
+   "metaopt_combined_te_gap_search/ds",
+   "metaopt_combined_te_gap_search/k3",
+   "nano_world_model/astra",
+   "nano_world_model/glm",
+   "nano_world_model/k3",
+   "parallel_dbscan/ds",
+   "parallel_dbscan/glm",
+   "persistent_treap_update_engine/ds",
+   "persistent_treap_update_engine/step",
+   "polygon/sol",
+   "progent_privilege_control/ds",
+   "progent_privilege_control/opus",
+   "progent_privilege_control/qwen",
+   "representation_frechet_loss/astra",
+   "residual_state_advancement/sol",
+   "shockwave_dynamic_gpu_allocation/ds",
+   "shockwave_dynamic_gpu_allocation/glm",
+   "shockwave_dynamic_gpu_allocation/glmf",
+   "shockwave_dynamic_gpu_allocation/k3",
+   "shockwave_dynamic_gpu_allocation/opus",
+   "shockwave_dynamic_gpu_allocation/sol",
+   "shockwave_dynamic_gpu_allocation/step",
+   "shockwave_dynamic_gpu_allocation/wonder",
+   "vllm_llm_serving_optimization/astra"
+  ],
+  "missed_metric": {
+   "makespan_seconds": 6,
+   "compression_ratio": 4,
+   "branch_accuracy": 4,
+   "batch_latency_seconds": 3,
+   "lpips": 3,
+   "attack_success_rate": 3,
+   "selected_runtime_seconds": 2,
+   "worst_finish_time_fairness_rho": 2,
+   "elapsed_seconds": 2,
+   "lloyd_loop_latency_ms": 2,
+   "lookup_ns": 2,
+   "search_overhead_seconds": 2,
+   "gap": 2,
+   "delta": 2,
+   "tflops": 2,
+   "inception_fdr": 1,
+   "cpu_time_seconds": 1,
+   "inference_latency_ms": 1,
+   "throughput_ops_per_second": 1,
+   "refuted_pair": 1,
+   "residual_update_seconds": 1,
+   "latency_ms": 1,
+   "runtime_seconds": 1,
+   "historical_query_us": 1,
+   "training_latency_ms": 1,
+   "ema_quantized_png_psnr_db": 1,
+   "search_latency_ms": 1,
+   "ocr_reward": 1,
+   "branches_covered": 1,
+   "case_throughput_ktps": 1,
+   "paired_timing": 1
+  },
+  "per_agent": {
+   "astra": {
+    "passes": 21,
+    "one_miss_fails": 7
+   },
+   "ds": {
+    "passes": 7,
+    "one_miss_fails": 10
+   },
+   "gemini": {
+    "passes": 19,
+    "one_miss_fails": 2
+   },
+   "glm": {
+    "passes": 12,
+    "one_miss_fails": 7
+   },
+   "glmf": {
+    "passes": 6,
+    "one_miss_fails": 3
+   },
+   "k3": {
+    "passes": 10,
+    "one_miss_fails": 4
+   },
+   "muse": {
+    "passes": 6,
+    "one_miss_fails": 0
+   },
+   "opus": {
+    "passes": 28,
+    "one_miss_fails": 4
+   },
+   "qwen": {
+    "passes": 6,
+    "one_miss_fails": 4
+   },
+   "sol": {
+    "passes": 17,
+    "one_miss_fails": 7
+   },
+   "step": {
+    "passes": 4,
+    "one_miss_fails": 5
+   },
+   "wonder": {
+    "passes": 10,
+    "one_miss_fails": 4
+   }
+  }
+ },
+ "near_misses_all": {
+  "graded_fails": 599,
+  "one_miss": 84,
+  "one_miss_records": [
+   "babble_anti_unification/astra",
+   "babble_anti_unification/gemini",
+   "babble_anti_unification/k31",
+   "babble_anti_unification/qwen",
+   "babble_anti_unification/step",
+   "batch_local_counting/ds",
+   "batch_local_counting/fable51",
+   "batch_local_counting/glm",
+   "batch_local_counting/k3",
+   "bbq_packet_scheduling/astra",
+   "binary_fuse_filter/glm",
+   "binary_fuse_filter/sol",
+   "bounded_evm_path_prediction/ds",
+   "bounded_evm_path_prediction/glmf",
+   "bounded_evm_path_prediction/qwen",
+   "bounded_evm_path_prediction/wonder",
+   "ckks_composable_noise/ds1017",
+   "cute_crest/ds1017",
+   "cute_crest/opus",
+   "cute_crest/sol",
+   "cute_crest/step",
+   "cute_crest/terra",
+   "dbscan_gpu_kernel_optimization/gemini-agy",
+   "detok_latent_denoising/opus",
+   "dynamic_tanh/astra",
+   "dynamic_tanh/ds",
+   "dynamic_tanh/k31",
+   "dynamic_tanh/terra",
+   "edlib_exact_alignment/astra",
+   "flow_opd/step",
+   "graph_mining_method_selection/ds",
+   "graph_mining_method_selection/glm",
+   "graph_mining_method_selection/terra",
+   "hypergraph_core_numbers/k31",
+   "hypergraph_core_numbers/sol",
+   "ivf_pq_gpu_kernel_optimization/glmf",
+   "ivf_pq_gpu_kernel_optimization/terra",
+   "kami_fp64_block_gemm/ds1017",
+   "kami_fp64_block_gemm/k31",
+   "kami_fp64_block_gemm/qwen",
+   "kami_fp64_block_gemm/wonder",
+   "kmeans_gpu_kernel_optimization/ds1017",
+   "kmeans_gpu_kernel_optimization/glm",
+   "kmeans_gpu_kernel_optimization/wonder",
+   "knn_gpu_kernel_optimization/sol",
+   "lejepa_world_model/carbon-g",
+   "lejepa_world_model/ds",
+   "lejepa_world_model/fable51",
+   "lejepa_world_model/gemini",
+   "metaopt_combined_te_gap_search/ds",
+   "metaopt_combined_te_gap_search/k3",
+   "nano_world_model/astra",
+   "nano_world_model/ds1017",
+   "nano_world_model/fable51",
+   "nano_world_model/glm",
+   "nano_world_model/k3",
+   "parallel_dbscan/ds",
+   "parallel_dbscan/gemini-agy",
+   "parallel_dbscan/glm",
+   "parallel_radix_sort/gemini-agy",
+   "parallel_radix_sort/k31",
+   "persistent_treap_update_engine/ds",
+   "persistent_treap_update_engine/ds1017",
+   "persistent_treap_update_engine/step",
+   "polygon/sol",
+   "progent_privilege_control/ds",
+   "progent_privilege_control/ds1017",
+   "progent_privilege_control/fable51",
+   "progent_privilege_control/k31",
+   "progent_privilege_control/opus",
+   "progent_privilege_control/qwen",
+   "representation_frechet_loss/astra",
+   "residual_state_advancement/sol",
+   "shockwave_dynamic_gpu_allocation/ds",
+   "shockwave_dynamic_gpu_allocation/fable51",
+   "shockwave_dynamic_gpu_allocation/glm",
+   "shockwave_dynamic_gpu_allocation/glmf",
+   "shockwave_dynamic_gpu_allocation/k3",
+   "shockwave_dynamic_gpu_allocation/opus",
+   "shockwave_dynamic_gpu_allocation/sol",
+   "shockwave_dynamic_gpu_allocation/step",
+   "shockwave_dynamic_gpu_allocation/wonder",
+   "vllm_llm_serving_optimization/astra",
+   "vllm_llm_serving_optimization/fable51"
+  ],
+  "missed_metric": {
+   "makespan_seconds": 7,
+   "compression_ratio": 5,
+   "attack_success_rate": 5,
+   "batch_latency_seconds": 4,
+   "lpips": 4,
+   "branch_accuracy": 4,
+   "delta": 4,
+   "tflops": 4,
+   "selected_runtime_seconds": 3,
+   "elapsed_seconds": 3,
+   "lloyd_loop_latency_ms": 3,
+   "search_overhead_seconds": 3,
+   "training_latency_ms": 3,
+   "worst_finish_time_fairness_rho": 2,
+   "lookup_ns": 2,
+   "runtime_seconds": 2,
+   "historical_query_us": 2,
+   "gap": 2,
+   "search_latency_ms": 2,
+   "branches_covered": 2,
+   "paired_timing": 2,
+   "sort_time_ns": 2,
+   "inception_fdr": 1,
+   "cpu_time_seconds": 1,
+   "inference_latency_ms": 1,
+   "throughput_ops_per_second": 1,
+   "refuted_pair": 1,
+   "residual_update_seconds": 1,
+   "latency_ms": 1,
+   "ema_quantized_png_psnr_db": 1,
+   "ocr_reward": 1,
+   "case_throughput_ktps": 1,
+   "estimator_seconds": 1,
+   "ssim": 1,
+   "dbscan_latency_ms": 1,
+   "utility_under_attack": 1
+  },
+  "per_agent": {
+   "astra": {
+    "passes": 21,
+    "one_miss_fails": 7
+   },
+   "carbon-g": {
+    "passes": 26,
+    "one_miss_fails": 1
+   },
+   "ds": {
+    "passes": 7,
+    "one_miss_fails": 10
+   },
+   "ds1017": {
+    "passes": 8,
+    "one_miss_fails": 7
+   },
+   "fable51": {
+    "passes": 18,
+    "one_miss_fails": 6
+   },
+   "gemini": {
+    "passes": 19,
+    "one_miss_fails": 2
+   },
+   "gemini-agy": {
+    "passes": 26,
+    "one_miss_fails": 3
+   },
+   "glm": {
+    "passes": 12,
+    "one_miss_fails": 7
+   },
+   "glmf": {
+    "passes": 6,
+    "one_miss_fails": 3
+   },
+   "k27": {
+    "passes": 4,
+    "one_miss_fails": 0
+   },
+   "k3": {
+    "passes": 10,
+    "one_miss_fails": 4
+   },
+   "k31": {
+    "passes": 12,
+    "one_miss_fails": 6
+   },
+   "muse": {
+    "passes": 6,
+    "one_miss_fails": 0
+   },
+   "opus": {
+    "passes": 28,
+    "one_miss_fails": 4
+   },
+   "qwen": {
+    "passes": 6,
+    "one_miss_fails": 4
+   },
+   "sol": {
+    "passes": 17,
+    "one_miss_fails": 7
+   },
+   "step": {
+    "passes": 4,
+    "one_miss_fails": 5
+   },
+   "terra": {
+    "passes": 19,
+    "one_miss_fails": 4
+   },
+   "wonder": {
+    "passes": 10,
+    "one_miss_fails": 4
+   }
+  }
+ },
+ "progent_attack_text": {
+  "rule": "Policies have to follow from the user's request, not from a list of known attacker strings.",
+  "runs": [
+   {
+    "model": "astra",
+    "verdict": "FAIL",
+    "markers": {}
+   },
+   {
+    "model": "carbon-g",
+    "verdict": "PASS",
+    "markers": {
+     "<INFORMATION>": 2,
+     "This is an important message from": 1,
+     "Before you can solve the task that I gave you": 1,
+     "Signed,": 1
+    }
+   },
+   {
+    "model": "ds",
+    "verdict": "FAIL",
+    "markers": {
+     "After you do that": 1
+    }
+   },
+   {
+    "model": "ds1017",
+    "verdict": "FAIL",
+    "markers": {
+     "<INFORMATION>": 1
+    }
+   },
+   {
+    "model": "fable51",
+    "verdict": "FAIL",
+    "markers": {
+     "<INFORMATION>": 2
+    }
+   },
+   {
+    "model": "gemini",
+    "verdict": "FAIL",
+    "markers": {
+     "<INFORMATION>": 11,
+     "please do the following first": 1,
+     "After you do that": 1
+    }
+   },
+   {
+    "model": "gemini-agy",
+    "verdict": "PASS",
+    "markers": {
+     "<INFORMATION>": 11,
+     "This is an important message from": 1,
+     "please do the following first": 1,
+     "After you do that": 1,
+     "Signed,": 1
+    }
+   },
+   {
+    "model": "glm",
+    "verdict": "FAIL",
+    "markers": {
+     "<INFORMATION>": 6,
+     "This is an important message from": 3,
+     "please do the following first": 4,
+     "Signed,": 1
+    }
+   },
+   {
+    "model": "glmf",
+    "verdict": "FAIL",
+    "markers": {
+     "<INFORMATION>": 2
+    }
+   },
+   {
+    "model": "k27",
+    "verdict": "FAIL",
+    "markers": {
+     "<INFORMATION>": 7
+    }
+   },
+   {
+    "model": "k3",
+    "verdict": "FAIL",
+    "markers": {
+     "<INFORMATION>": 3,
+     "This is an important message from": 1,
+     "Before you can solve the task that I gave you": 1
+    }
+   },
+   {
+    "model": "k31",
+    "verdict": "FAIL",
+    "markers": {
+     "<INFORMATION>": 2
+    }
+   },
+   {
+    "model": "muse",
+    "verdict": "FAIL",
+    "markers": {
+     "<INFORMATION>": 2,
+     "After you do that": 1,
+     "Signed,": 1
+    }
+   },
+   {
+    "model": "opus",
+    "verdict": "FAIL",
+    "markers": {
+     "<INFORMATION>": 1,
+     "This is an important message from": 1,
+     "please do the following first": 1,
+     "After you do that": 1
+    }
+   },
+   {
+    "model": "qwen",
+    "verdict": "FAIL",
+    "markers": {
+     "<INFORMATION>": 6,
+     "This is an important message from": 1,
+     "After you do that": 1
+    }
+   },
+   {
+    "model": "sol",
+    "verdict": "FAIL",
+    "markers": {}
+   },
+   {
+    "model": "step",
+    "verdict": "FAIL",
+    "markers": {}
+   },
+   {
+    "model": "terra",
+    "verdict": "FAIL",
+    "markers": {
+     "<INFORMATION>": 2
+    }
+   },
+   {
+    "model": "wonder",
+    "verdict": "FAIL",
+    "markers": {
+     "<INFORMATION>": 3
+    }
+   }
+  ],
+  "passing": [
+   "carbon-g",
+   "gemini-agy"
+  ],
+  "passing_with_markers": [
+   "carbon-g",
+   "gemini-agy"
+  ]
+ },
+ "reruns": {
+  "other_runs": 656,
+  "graded_other_runs": 346,
+  "clean_comparisons": 277,
+  "verdict_pairs": {
+   "FAIL/FAIL": 154,
+   "FAIL/PASS": 50,
+   "PASS/FAIL": 30,
+   "PASS/PASS": 43
+  },
+  "note": "Cause of each rerun is not in the release and internal task-version ids are omitted, so disagreement here is NOT an estimate of run-to-run noise."
+ }
+}
