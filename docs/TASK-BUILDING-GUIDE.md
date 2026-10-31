@@ -19,7 +19,7 @@ Remove the code that implements the paper's idea; leave everything it depends on
 
 ## 3. Keep the deleted code as the private reference
 
-The deleted code becomes `judge/reference.patch`, held by the judge and never copied into the agent's image (paper, Section 3; `binary_fuse_filter/README.md`). Present in **45 of 48** tasks (the rest use a reference program or, for Structured LWE, published instances).
+The deleted code becomes `judge/reference.patch`, held by the judge and never copied into the agent's image (paper, Section 3; `binary_fuse_filter/README.md`). Present in **45 of 48** tasks. Of the other three, KV Compaction ships a full reference source tree (`judge/reference_tree/`), MetaOpt a reference program (`judge/reference.py`), and MuJoCo Playground has no reference file under `judge/`.
 
 ## 4. Fix the patch surface
 
