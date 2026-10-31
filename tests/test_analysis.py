@@ -73,6 +73,27 @@ def test_pinned_findings(findings):
     assert pg["passing"] == ["carbon-g", "gemini-agy"] == pg["passing_with_markers"]
 
 
+@pytest.mark.network
+def test_task_artifact_coverage(findings):
+    a = findings["task_artifacts"]
+    assert a["tasks"] == 48
+    counts = {k.split(" (")[0]: v["count"] for k, v in a["artifacts"].items()}
+    assert counts["beat spec"] == counts["policy"] == counts["file-hash lock"] == 48
+    assert counts["reference patch"] == 45
+
+
+def test_artifact_coverage_on_synthetic_tree():
+    p = "tasks/frontier-cs-2.0-demo/problems/Theory/"
+    tree = [p + "a/judge/beat_spec.json", p + "a/policy.json", p + "b/policy.json",
+            p + "a/judge/reference/history/old/runtime-qualification.json"]
+    from fcs2audit import tasks as T
+    c = T.artifact_coverage(tree)
+    assert c["tasks"] == 2
+    assert c["artifacts"]["policy (policy.json)"]["count"] == 2
+    assert c["artifacts"]["beat spec (judge/beat_spec.json)"]["tasks"] == ["a"]
+    assert c["artifacts"]["runtime qualification receipt"]["count"] == 0  # history/ ignored
+
+
 def test_sources_are_pinned_to_commits():
     assert len(S.HF_REVISION) == 40 and len(S.GH_REVISION) == 40
     assert S.HF_REVISION in S.hf_url("x") and S.GH_REVISION in S.gh_url("x")

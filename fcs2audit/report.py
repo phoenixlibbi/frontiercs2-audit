@@ -9,6 +9,7 @@ import sys
 
 from . import analysis as A
 from . import sources as S
+from . import tasks as T
 
 FIG6 = {"opus": 9.4, "astra": 7.1, "sol": 5.7, "gemini": 2.1, "glm": 1.8, "wonder": 4.1,
         "ds": 0.5, "k3": -1.2, "glmf": -8.4, "muse": -3.3, "qwen": -6.4, "step": -10.6}
@@ -33,6 +34,7 @@ def build() -> dict:
         "near_misses_all": A.near_misses(results),
         "progent_attack_text": A.progent_attack_text(results, S.patch_text),
         "reruns": A.reruns(results),
+        "task_artifacts": T.artifact_coverage(),
     }
 
 
@@ -85,6 +87,12 @@ def markdown(f: dict) -> str:
         f"`other_runs` holds {rr['other_runs']} non-accepted runs ({rr['graded_other_runs']} graded). "
         f"On {rr['clean_comparisons']} clean comparisons the verdict pairs (accepted/other) are "
         + ", ".join(f"{k} {v}" for k, v in rr["verdict_pairs"].items()) + ". " + rr["note"], "",
+        "## 7. Task-building artifacts in the released tasks", "",
+        f"From the task tree at the pinned commit ({f['task_artifacts']['tasks']} tasks):", "",
+        "| Artifact | Tasks |", "|---|---|",
+        *[f"| {k} | {v['count']}" + (f" ({', '.join(v['tasks'])})" if v["tasks"] != "all" and v["count"] <= 5 else "")
+          + " |" for k, v in f["task_artifacts"]["artifacts"].items()],
+        "",
     ]
     return "\n".join(lines)
 

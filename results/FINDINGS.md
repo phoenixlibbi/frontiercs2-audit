@@ -85,3 +85,18 @@ A phrase mention alone is not proof of a detector; the two passing patches were 
 ## 6. Reruns (not a finding)
 
 `other_runs` holds 656 non-accepted runs (346 graded). On 277 clean comparisons the verdict pairs (accepted/other) are FAIL/FAIL 154, FAIL/PASS 50, PASS/FAIL 30, PASS/PASS 43. Cause of each rerun is not in the release and internal task-version ids are omitted, so disagreement here is NOT an estimate of run-to-run noise.
+
+## 7. Task-building artifacts in the released tasks
+
+From the task tree at the pinned commit (48 tasks):
+
+| Artifact | Tasks |
+|---|---|
+| beat spec (judge/beat_spec.json) | 48 |
+| policy (policy.json) | 48 |
+| file-hash lock (upstream.lock.json) | 48 |
+| train/eval workload descriptors (datasets/) | 47 |
+| reference patch (judge/reference.patch) | 45 |
+| patch-surface checker (judge/submission_patch.py) | 40 |
+| runtime qualification receipt | 3 (binary_fuse_filter, edlib_exact_alignment, flow_opd) |
+| statistical calibration record | 3 (binary_fuse_filter, ckks_composable_noise, fast_kv_compaction) |
